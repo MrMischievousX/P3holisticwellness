@@ -14,7 +14,7 @@ const Header = () => {
             Yoginis
           </a>
           <a
-            href='/about'
+            href='/P3holisticwellness/about'
             className='text-text-accent text-base font-medium cursor-pointer hover:underline underline-offset-4'
           >
             About us
@@ -26,7 +26,7 @@ const Header = () => {
         <div className='lg:absolute flex justify-center items-center lg:w-full lg:h-full z-1'>
           <img
             onClick={() => {
-              location.replace(location.origin);
+              location.replace(location.origin + location.pathname);
             }}
             src='assets/common/svgs/logo.svg'
             alt='logo'
@@ -36,7 +36,7 @@ const Header = () => {
         <div className='cursor-pointer z-1'>
           <img
             onClick={() => {
-              location.replace(location.origin);
+              location.replace(location.origin + location.pathname);
             }}
             src='assets/common/svgs/logo-name.svg'
             alt='name'
@@ -46,7 +46,6 @@ const Header = () => {
         <div className='lg:hidden z-1'>
           <img
             onClick={() => {
-              console.info("jjjj");
               setIsMenuHidden(!isMenuHidden);
             }}
             src='assets/common/svgs/menu.svg'
@@ -74,7 +73,7 @@ const Header = () => {
             <img src='assets/common/svgs/login-underline.svg' alt='' />
           </div>
           <div>
-            <a href='/about' className='font-cormorant font-bold text-xl text-text-accent'>
+            <a href='/P3holisticwellness/about' className='font-cormorant font-bold text-xl text-text-accent'>
               About us
             </a>
             <img src='assets/common/svgs/login-underline.svg' alt='' />
