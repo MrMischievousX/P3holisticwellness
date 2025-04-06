@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap");
+
+@import "tailwindcss";
+
+@plugin 'tailwind-scrollbar';
+
+@theme {
+  --color-accent: #b8d7d6;
+  --color-text-accent: #28514f;
+  --color-text-primary: #398a86;
+  --font-cormorant: "Cormorant Garamond", serif;
+  --font-satisfy: "Satisfy", cursive;
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+img,
+button {
+  user-select: none !important;
+}
+
+@utility text-shadow {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+}
+
+@utility shadow-custom {
+  box-shadow: 0px 4px 20px 0px #00000040;
+}
