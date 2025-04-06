@@ -43,9 +43,10 @@ const Header = () => {
             className='w-52 h-7 cursor-pointer'
           />
         </div>
-        <div className='lg:hidden'>
+        <div className='lg:hidden z-1'>
           <img
             onClick={() => {
+              console.info("jjjj");
               setIsMenuHidden(!isMenuHidden);
             }}
             src='assets/common/svgs/menu.svg'
@@ -54,43 +55,32 @@ const Header = () => {
           />
         </div>
       </div>
-      {/* <div
+      <div
         className={`bg-white absolute right-0 top-16 min-w-80 rounded-l-xl p-8 transition-all duration-700 transform ${
-          isMenuHidden
-            ? "opacity-0 translate-x-full pointer-events-none"
-            : "opacity-100 translate-x-0"
+          isMenuHidden ? "opacity-0 pointer-events-none" : "opacity-100"
         }`}
       >
-        <div className="flex justify-end items-center mb-8 gap-2">
-          <a className="font-cormorant font-bold text-3xl text-text-accent">
-            Sign up
-          </a>
-          <img src="assets/common/svgs/login.svg" alt="" className="w-8 h-8" />
+        <div className='flex justify-end items-center mb-8 gap-2'>
+          <a className='font-cormorant font-bold text-3xl text-text-accent'>Sign up</a>
+          <img src='assets/common/svgs/login.svg' alt='' className='w-8 h-8' />
         </div>
-        <div className="flex flex-col gap-6">
+        <div className='flex flex-col gap-6'>
           <div>
-            <a className="font-cormorant font-bold text-xl text-text-accent">
-              Resources
-            </a>
-            <img src="assets/common/svgs/login-underline.svg" alt="" />
+            <a className='font-cormorant font-bold text-xl text-text-accent'>Resources</a>
+            <img src='assets/common/svgs/login-underline.svg' alt='' />
           </div>
           <div>
-            <a className="font-cormorant font-bold text-xl text-text-accent">
-              Yoginis
-            </a>
-            <img src="assets/common/svgs/login-underline.svg" alt="" />
+            <a className='font-cormorant font-bold text-xl text-text-accent'>Yoginis</a>
+            <img src='assets/common/svgs/login-underline.svg' alt='' />
           </div>
           <div>
-            <a
-              href="/about"
-              className="font-cormorant font-bold text-xl text-text-accent"
-            >
+            <a href='/about' className='font-cormorant font-bold text-xl text-text-accent'>
               About us
             </a>
-            <img src="assets/common/svgs/login-underline.svg" alt="" />
+            <img src='assets/common/svgs/login-underline.svg' alt='' />
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
