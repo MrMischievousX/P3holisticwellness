@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import Carousel from "../components/Carousel";
 import JoinUs from "../components/JoinUs";
 import Mission from "../components/Mission";
@@ -12,6 +13,7 @@ const steps = [
     subTitle: "Pay-It-Forward",
     desc: "For every session you book, you help provide free wellness services to women in need. There are 2 options: If you pay regular price, one woman will be allowed service for free and if you pay a bit higher prize, two women will be given free services.",
     link: "Choose Your Impact",
+    url: "",
   },
   {
     imgUrl: "assets/common/images/step-2.png",
@@ -20,6 +22,7 @@ const steps = [
     subTitle: "Services",
     desc: "We provide workshops, seminars, and online resources to educate and empower women with holistic health knowledge they can apply to their daily lives. We provide a space for you to meditate, a nutritious diet plan and programs that might be beneficial for you.",
     link: "Services",
+    url: "#services",
   },
   {
     imgUrl: "assets/common/images/step-3.png",
@@ -28,6 +31,7 @@ const steps = [
     subTitle: "Engage",
     desc: `Join our "Step Into Your Personal Power" Facebook community to connect with like-minded women on holistic health and growth. Gain expert tips, live sessions, and support in a space designed for mind, body, and spirit transformation.`,
     link: "Connect with our community",
+    url: "https://www.facebook.com/share/g/194jdT6Dfc/",
   },
 ];
 
@@ -102,9 +106,20 @@ const Home = () => {
                   <div className='font-cormorant text-2xl text-center font-bold text-white'>{step.title}</div>
                   <div className='font-cormorant text-2xl text-center font-bold text-white mt-1'>{step.subTitle}</div>
                   <div className='font-montserrat text-lg text-center font-normal text-white mt-2'>{step.desc}</div>
-                  <div className='font-montserrat text-lg text-center font-normal text-white mt-2 underline cursor-pointer underline-offset-2'>
-                    {step.link}
-                  </div>
+                  {step.url ? (
+                    <a
+                      href={step.url}
+                      target={step.url.includes("#") ? "_self" : "_blank"}
+                      rel='noopener noreferrer'
+                      className='font-montserrat text-lg text-center font-normal text-white mt-2 underline cursor-pointer underline-offset-2'
+                    >
+                      {step.link}
+                    </a>
+                  ) : (
+                    <span className='font-montserrat text-lg text-center font-normal text-white mt-2 underline cursor-pointer underline-offset-2'>
+                      {step.link}
+                    </span>
+                  )}
                 </div>
                 <div className='hidden lg:flex flex-col items-start ml-5 mb-5 group-hover:hidden'>
                   <div className='font-cormorant text-2xl text-center font-bold text-white'>{step.title}</div>
@@ -115,7 +130,7 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className='bg-accent py-6'>
+      <div className='bg-accent py-6' id='services'>
         <div className='font-cormorant text-3xl text-center font-bold text-text-accent pt-4 pb-7'>Our Services</div>
         <div className='flex gap-8 overflow-x-auto px-6 py-2 scrollbar-none scrollbar-thumb-gray-400 scroll-smooth'>
           {services.map((service, index) => {

@@ -13,7 +13,7 @@ const members = [
     name: "Rachel Webster",
     about:
       "A Certified Public Accountant (CPA) with over a decade in nonprofit auditing, ensures financial transparency and compliance. With degrees in Communications (Ithaca College, 2006) and Accounting (UNC Charlotte, 2013), she specializes in financial audits, ledger maintenance, and Form 990 compliance. Her expertise strengthens the board’s fiscal oversight and strategic planning.",
-    link: "https://www.linkedin.com/in/harriet-russell-175b9453/",
+    link: "https://www.linkedin.com/in/rachel-webster-7427b734/",
   },
   {
     title: "Director of Development",
@@ -41,32 +41,28 @@ const members = [
     name: "Sanya Ramjattan",
     about:
       "Engineering expertise with holistic wellness to create meaningful change. With 10+ years in project management and a Lean Six Sigma Black Belt, she drives efficiency and team growth. A certified yoga and meditation instructor, she integrates strategic thinking with mindfulness for transformation. Now at P3 Holistic Wellness, she empowers women to achieve sustainable well-being in life and work.",
-    link: "https://www.linkedin.com/in/harriet-russell-175b9453/",
+    link: "https://www.linkedin.com/in/sanya-ramjattan/",
   },
 ];
 
 const About = () => {
   return (
-    <div className="">
+    <div className=''>
       <div
         className={`h-[calc(100vh-64px)] w-screen justify-center bg-no-repeat bg-cover bg-center flex items-center py-4 transition-opacity duration-700 opacity-100 bg-[url(assets/mobile/images/about.png)]`}
       >
-        <div className="p-4 my-12 mx-8 bg-white rounded-2xl font-montserrat text-xl font-normal text-[#398A86] text-center lg:max-w-3xl lg:p-4">
-          Founded in 2020 during the COVID-19 pandemic, our nonprofit
-          organization is based in North Carolina, USA. We are dedicated to
-          making holistic health accessible to those who need it most. We
-          provide services that include Wellness Education, covering
-          mindfulness, meditation, holistic nutrition, yoga, and stress
-          management, Reiki, sound therapy, and guided meditation to promote
-          overall well-being. <br />
-          <br /> Our services promote self-awareness, empowerment, and holistic
-          transformation. By collaborating with community partners, donors, and
-          volunteers, we strive to make holistic wellness a fundamental right,
-          not a luxury.
+        <div className='p-4 my-12 mx-8 bg-white rounded-2xl font-montserrat text-xl font-normal text-[#398A86] text-center lg:max-w-3xl lg:p-4'>
+          Founded in 2020 during the COVID-19 pandemic, our nonprofit organization is based in North Carolina, USA. We
+          are dedicated to making holistic health accessible to those who need it most. We provide services that include
+          Wellness Education, covering mindfulness, meditation, holistic nutrition, yoga, and stress management, Reiki,
+          sound therapy, and guided meditation to promote overall well-being. <br />
+          <br /> Our services promote self-awareness, empowerment, and holistic transformation. By collaborating with
+          community partners, donors, and volunteers, we strive to make holistic wellness a fundamental right, not a
+          luxury.
         </div>
       </div>
 
-      <div className="py-9 bg-accent text-2xl font-cormorant text-text-accent text-center font-bold lg:text-5xl lg:py-18">
+      <div className='py-9 bg-accent text-2xl font-cormorant text-text-accent text-center font-bold lg:text-5xl lg:py-18'>
         Meet our board members
       </div>
       <div>
@@ -86,23 +82,15 @@ const About = () => {
                 !isAlternate ? "flex-row-reverse" : "flex-row"
               } lg:px-8`}
             >
-              <img
-                className="w-72 h-72 lg:w-64 lg:h-64"
-                src={`assets/common/images/about-${index + 1}.png`}
-                alt=""
-              />
-              <div
-                className={`flex items-center justify-center gap-5 flex-col lg:flex-col-reverse`}
-              >
-                <div className="w-full flex justify-center items-center flex-col gap-2 lg:items-start">
-                  <div className="text-2xl font-montserrat text-text-primary text-center font-bold max-w-5/6">
+              <img className='w-72 h-72 lg:w-64 lg:h-64' src={`assets/common/images/about-${index + 1}.png`} alt='' />
+              <div className={`flex items-center justify-center gap-5 flex-col lg:flex-col-reverse`}>
+                <div className='w-full flex justify-center items-center flex-col gap-2 lg:items-start'>
+                  <div className='text-2xl font-montserrat text-text-primary text-center font-bold max-w-5/6'>
                     {member.title}
                   </div>
-                  <div className="text-2xl font-montserrat text-text-primary text-center font-bold">
-                    {member.name}
-                  </div>
+                  <div className='text-2xl font-montserrat text-text-primary text-center font-bold'>{member.name}</div>
                 </div>
-                <div className="text-xl font-montserrat text-text-primary text-center font-normal lg:text-left">
+                <div className='text-xl font-montserrat text-text-primary text-center font-normal lg:text-left'>
                   {member.about}
                 </div>
               </div>

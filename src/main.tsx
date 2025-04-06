@@ -7,11 +7,11 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 
 createRoot(document.getElementById("root")!).render(
-  <BrowserRouter>
+  <BrowserRouter basename='/P3holisticwellness/'>
     <Header />
     <Routes>
-      <Route path='/P3holisticwellness/' element={<Home />} />
-      <Route path='/P3holisticwellness/about' element={<About />} />
+      <Route path='*' element={<Home />} />
+      <Route path='/about' element={<About />} />
     </Routes>
     <Footer />
   </BrowserRouter>
