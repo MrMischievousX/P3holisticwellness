@@ -1,7 +1,7 @@
 {
   "name": "holisticwellness",
   "private": true,
-  "homepage": "https://MrMischievousX.github.io/P3holisticwellness",
+  "homepage": "https://mrmischievousx.github.io/P3holisticwellness/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.17",
