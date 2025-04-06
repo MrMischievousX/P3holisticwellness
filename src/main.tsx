@@ -10,8 +10,8 @@ createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
     <Header />
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
+      <Route path='/P3holisticwellness/' element={<Home />} />
+      <Route path='/P3holisticwellness/about' element={<About />} />
     </Routes>
     <Footer />
   </BrowserRouter>

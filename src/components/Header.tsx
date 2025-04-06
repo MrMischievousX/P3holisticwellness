@@ -4,53 +4,53 @@ const Header = () => {
   const [isMenuHidden, setIsMenuHidden] = useState(true);
 
   return (
-    <div className="sticky top-0 z-100">
-      <div className="h-16 w-screen bg bg-accent flex justify-between items-center px-4 flex-row lg:flex-row-reverse">
-        <div className="hidden lg:flex lg:justify-end items-center gap-5 z-10">
-          <a className="text-text-accent text-base font-medium cursor-pointer hover:underline underline-offset-4">
+    <div className='sticky top-0 z-100'>
+      <div className='h-16 w-screen bg bg-accent flex justify-between items-center px-4 flex-row lg:flex-row-reverse'>
+        <div className='hidden lg:flex lg:justify-end items-center gap-5 z-10'>
+          <a className='text-text-accent text-base font-medium cursor-pointer hover:underline underline-offset-4'>
             Resources
           </a>
-          <a className="text-text-accent text-base font-medium cursor-pointer hover:underline underline-offset-4">
+          <a className='text-text-accent text-base font-medium cursor-pointer hover:underline underline-offset-4'>
             Yoginis
           </a>
           <a
-            href="/about"
-            className="text-text-accent text-base font-medium cursor-pointer hover:underline underline-offset-4"
+            href='/about'
+            className='text-text-accent text-base font-medium cursor-pointer hover:underline underline-offset-4'
           >
             About us
           </a>
-          <div className="bg-text-accent text-white text-base px-4 py-2 font-medium rounded-3xl cursor-pointer hover:bg-[#3D7573]">
+          <div className='bg-text-accent text-white text-base px-4 py-2 font-medium rounded-3xl cursor-pointer hover:bg-[#3D7573]'>
             Donate
           </div>
         </div>
-        <div className="lg:absolute flex justify-center items-center lg:w-full lg:h-full z-1">
+        <div className='lg:absolute flex justify-center items-center lg:w-full lg:h-full z-1'>
           <img
             onClick={() => {
               location.replace(location.origin);
             }}
-            src="/assets/common/svgs/logo.svg"
-            alt="logo"
-            className="w-8 h-8 cursor-pointer"
+            src='assets/common/svgs/logo.svg'
+            alt='logo'
+            className='w-8 h-8 cursor-pointer'
           />
         </div>
-        <div className="cursor-pointer z-1">
+        <div className='cursor-pointer z-1'>
           <img
             onClick={() => {
               location.replace(location.origin);
             }}
-            src="assets/common/svgs/logo-name.svg"
-            alt="name"
-            className="w-52 h-7 cursor-pointer"
+            src='assets/common/svgs/logo-name.svg'
+            alt='name'
+            className='w-52 h-7 cursor-pointer'
           />
         </div>
-        <div className="lg:hidden">
+        <div className='lg:hidden'>
           <img
             onClick={() => {
               setIsMenuHidden(!isMenuHidden);
             }}
-            src="assets/common/svgs/menu.svg"
-            alt="menu"
-            className="h-5 w-5"
+            src='assets/common/svgs/menu.svg'
+            alt='menu'
+            className='h-5 w-5'
           />
         </div>
       </div>

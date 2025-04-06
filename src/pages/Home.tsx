@@ -64,83 +64,69 @@ const Home = () => {
   return (
     <div>
       <Carousel />
-      <div className="flex justify-evenly items-center flex-col min-h-screen">
+      <div className='flex justify-evenly items-center flex-col min-h-screen'>
         <Thrive />
         <Mission />
         <JoinUs />
       </div>
       <iframe
-        className="w-screen h-[700px] mt-20"
-        src="https://www.youtube.com/embed/2OYar8OHEOU?si=uHcyTq_IZ3qHbs51"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerPolicy="strict-origin-when-cross-origin"
+        className='w-screen h-[700px] mt-20'
+        src='https://www.youtube.com/embed/2OYar8OHEOU?si=uHcyTq_IZ3qHbs51'
+        title='YouTube video player'
+        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+        referrerPolicy='strict-origin-when-cross-origin'
         allowFullScreen
       />
-      <div className="mt-8">
-        <div className="font-cormorant text-3xl text-center font-bold text-text-accent my-5">
+      <div className='mt-8'>
+        <div className='font-cormorant text-3xl text-center font-bold text-text-accent my-5'>
           We are here to help you in 3 steps
         </div>
-        <div className="flex flex-col justify-center lg:flex-row">
+        <div className='flex flex-col justify-center lg:flex-row'>
           {steps.map((step, index) => (
             <div
               key={index}
-              className="relative w-[100vw] h-[100vw] lg:h-[33.33vw] lg:w-[33.33vw] p-5 group overflow-hidden"
+              className='relative w-[100vw] h-[100vw] lg:h-[33.33vw] lg:w-[33.33vw] p-5 group overflow-hidden'
             >
               <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-700 opacity-100"
+                className='absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-700 opacity-100'
                 style={{ backgroundImage: `url(${step.imgUrl})` }}
               />
 
               <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-700 opacity-0 group-hover:opacity-100"
+                className='absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-700 opacity-0 group-hover:opacity-100'
                 style={{ backgroundImage: `url(${step.hoverImgUrl})` }}
               />
 
-              <div className="relative z-10 flex w-full h-full flex-col items-center justify-center lg:items-start lg:justify-end p-2 border-[10px] border-white group-hover:items-center group-hover:justify-center">
-                <div className="lg:hidden group-hover:flex group-hover:flex-col transition-opacity">
-                  <div className="font-cormorant text-2xl text-center font-bold text-white">
-                    {step.title}
-                  </div>
-                  <div className="font-cormorant text-2xl text-center font-bold text-white mt-1">
-                    {step.subTitle}
-                  </div>
-                  <div className="font-montserrat text-lg text-center font-normal text-white mt-2">
-                    {step.desc}
-                  </div>
-                  <div className="font-montserrat text-lg text-center font-normal text-white mt-2 underline cursor-pointer underline-offset-2">
+              <div className='relative z-10 flex w-full h-full flex-col items-center justify-center lg:items-start lg:justify-end p-2 border-[10px] border-white group-hover:items-center group-hover:justify-center'>
+                <div className='lg:hidden group-hover:flex group-hover:flex-col transition-opacity'>
+                  <div className='font-cormorant text-2xl text-center font-bold text-white'>{step.title}</div>
+                  <div className='font-cormorant text-2xl text-center font-bold text-white mt-1'>{step.subTitle}</div>
+                  <div className='font-montserrat text-lg text-center font-normal text-white mt-2'>{step.desc}</div>
+                  <div className='font-montserrat text-lg text-center font-normal text-white mt-2 underline cursor-pointer underline-offset-2'>
                     {step.link}
                   </div>
                 </div>
-                <div className="hidden lg:flex flex-col items-start ml-5 mb-5 group-hover:hidden">
-                  <div className="font-cormorant text-2xl text-center font-bold text-white">
-                    {step.title}
-                  </div>
-                  <div className="font-cormorant text-2xl text-center font-bold text-white mt-1">
-                    {step.subTitle}
-                  </div>
+                <div className='hidden lg:flex flex-col items-start ml-5 mb-5 group-hover:hidden'>
+                  <div className='font-cormorant text-2xl text-center font-bold text-white'>{step.title}</div>
+                  <div className='font-cormorant text-2xl text-center font-bold text-white mt-1'>{step.subTitle}</div>
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
-      <div className="bg-accent py-6">
-        <div className="font-cormorant text-3xl text-center font-bold text-text-accent pt-4 pb-7">
-          Our Services
-        </div>
-        <div className="flex gap-8 overflow-x-auto px-6 py-2 scrollbar-none scrollbar-thumb-gray-400 scroll-smooth">
+      <div className='bg-accent py-6'>
+        <div className='font-cormorant text-3xl text-center font-bold text-text-accent pt-4 pb-7'>Our Services</div>
+        <div className='flex gap-8 overflow-x-auto px-6 py-2 scrollbar-none scrollbar-thumb-gray-400 scroll-smooth'>
           {services.map((service, index) => {
             return (
               <div
                 key={index}
-                className="border-1 border-text-accent bg-white flex-shrink-0 w-80 h-[590px] rounded-t-full flex justify-evenly items-center flex-col p-4 lg:border-2"
+                className='border-1 border-text-accent bg-white flex-shrink-0 w-80 h-[590px] rounded-t-full flex justify-evenly items-center flex-col p-4 lg:border-2'
               >
-                <img src={service.img} alt="" className="hover:scale-105" />
-                <div className="font-cormorant text-2xl text-center font-bold text-text-accent">
-                  {service.title}
-                </div>
-                <div className="font-montserrat text-lg text-center font-normal text-text-accent whitespace-pre-line">
+                <img src={service.img} alt='' className='hover:scale-105' />
+                <div className='font-cormorant text-2xl text-center font-bold text-text-accent'>{service.title}</div>
+                <div className='font-montserrat text-lg text-center font-normal text-text-accent whitespace-pre-line'>
                   {service.desc}
                 </div>
               </div>
@@ -148,25 +134,21 @@ const Home = () => {
           })}
         </div>
       </div>
-      <div className="font-cormorant text-3xl font-semibold text-text-accent text-center bg-white my-10"></div>
-      <div className="flex justify-center items-center flex-1 lg:py-15">
-        <div className="font-satisfy text-3xl font-normal text-text-accent text-center flex flex-1 justify-center items-center px-4 lg:flex-initial lg:p-16 lg:font-cormorant lg:text-5xl lg:font-semibold relative">
-          <span className="text-[#197772CC]">“</span>
+      <div className='font-cormorant text-3xl font-semibold text-text-accent text-center bg-white my-10'></div>
+      <div className='flex justify-center items-center flex-1 lg:py-15'>
+        <div className='font-satisfy text-3xl font-normal text-text-accent text-center flex flex-1 justify-center items-center px-4 lg:flex-initial lg:p-16 lg:font-cormorant lg:text-5xl lg:font-semibold relative'>
+          <span className='text-[#197772CC]'>“</span>
           Your Healing, Their Healing
-          <span className="text-[#197772CC]">”</span>
+          <span className='text-[#197772CC]'>”</span>
+          <img src='assets/common/svgs/healing-left.svg' alt='logo' className='absolute left-1 top-1 hidden lg:flex' />
           <img
-            src="/assets/common/svgs/healing-left.svg"
-            alt="logo"
-            className="absolute left-1 top-1 hidden lg:flex"
-          />
-          <img
-            src="/assets/common/svgs/healing-right.svg"
-            alt="logo"
-            className="absolute right-1 bottom-1 hidden lg:flex"
+            src='assets/common/svgs/healing-right.svg'
+            alt='logo'
+            className='absolute right-1 bottom-1 hidden lg:flex'
           />
         </div>
       </div>
-      <div className="mt-8">
+      <div className='mt-8'>
         <JoinUs />
       </div>
       <Testimonials />
