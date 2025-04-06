@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router";
 import Carousel from "../components/Carousel";
 import JoinUs from "../components/JoinUs";
 import Mission from "../components/Mission";
