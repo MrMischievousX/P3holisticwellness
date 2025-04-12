@@ -40,7 +40,7 @@ const members = [
     title: "Director of Strategy",
     name: "Sanya Ramjattan",
     about:
-      "Engineering expertise with holistic wellness to create meaningful change. With 10+ years in project management and a Lean Six Sigma Black Belt, she drives efficiency and team growth. A certified yoga and meditation instructor, she integrates strategic thinking with mindfulness for transformation. Now at P3 Holistic Wellness, she empowers women to achieve sustainable well-being in life and work.",
+      "Sanya’s decade-long expertise in engineering, leadership and continuous improvement drives her journey of self-improvement. She circumnavigated the globe to learn how to create positive change. Now a Certified Yoga and Meditation teacher, she blends mindfulness with strategic thinking, transforming challenges into growth opportunities. At P3, Sanya empowers women to unlock their full potential in life and work.",
     link: "https://www.linkedin.com/in/sanya-ramjattan/",
   },
 ];
