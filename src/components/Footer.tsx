@@ -41,7 +41,9 @@ const Footer = () => {
             })}
           </div>
           <div className='group inline-flex justify-center items-center flex-col cursor-pointer'>
-            <div className='text-4xl font-cormorant text-text-accent text-center font-bold'>Donate now</div>
+            <div className='text-4xl font-cormorant text-text-accent text-center font-bold group-hover:text-[#C86251]'>
+              Donate now
+            </div>
             <svg width='181' height='4' viewBox='0 0 181 4' fill='none' xmlns='http://www.w3.org/2000/svg'>
               <path
                 className='fill-text-accent group-hover:fill-[#C86251]'

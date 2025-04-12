@@ -101,7 +101,7 @@ const Home = () => {
               />
 
               <div className='relative z-10 flex w-full h-full flex-col items-center justify-center lg:items-start lg:justify-end p-2 border-[10px] border-white group-hover:items-center group-hover:justify-center'>
-                <div className='lg:hidden group-hover:flex group-hover:flex-col transition-opacity'>
+                <div className='flex flex-col lg:hidden group-hover:flex group-hover:flex-col transition-opacity items-center'>
                   <div className='font-cormorant text-2xl text-center font-bold text-white'>{step.title}</div>
                   <div className='font-cormorant text-2xl text-center font-bold text-white mt-1'>{step.subTitle}</div>
                   <div className='font-montserrat text-lg text-center font-normal text-white mt-2'>{step.desc}</div>
