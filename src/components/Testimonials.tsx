@@ -48,7 +48,7 @@ const Testimonials = () => {
             key={currentVidIndex}
             controls
             playsInline
-            preload='auto'
+            preload='metadata'
             className='w-full h-full rounded-2xl object-cover lg:object-contain transition-opacity duration-700'
           >
             <source src={vidUrl[currentVidIndex]} type='video/mp4' />

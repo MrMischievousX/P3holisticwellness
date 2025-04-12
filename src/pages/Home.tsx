@@ -178,7 +178,7 @@ const Home = () => {
                   {service.imp2 && (
                     <div
                       onClick={() => {
-                        window?.open(service.imp1, "_blank");
+                        window?.open(service.imp2, "_blank");
                       }}
                       className='text-text-accent font-bold text-xl text-center font-cormorant bg-accent px-3 py-1 rounded-2xl cursor-pointer'
                     >
