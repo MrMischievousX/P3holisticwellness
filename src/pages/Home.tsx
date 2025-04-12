@@ -12,7 +12,7 @@ const steps = [
     subTitle: "Pay-It-Forward",
     desc: "For every session you book, you help provide free wellness services to women in need. There are 2 options: If you pay regular price, one woman will be allowed service for free and if you pay a bit higher prize, two women will be given free services.",
     link: "Choose Your Impact",
-    url: "",
+    url: "#services",
   },
   {
     imgUrl: "assets/common/images/step-2.png",
@@ -21,7 +21,7 @@ const steps = [
     subTitle: "Services",
     desc: "We provide workshops, seminars, and online resources to educate and empower women with holistic health knowledge they can apply to their daily lives. We provide a space for you to meditate, a nutritious diet plan and programs that might be beneficial for you.",
     link: "Services",
-    url: "#services",
+    url: "https://l.bttr.to/luA0Y",
   },
   {
     imgUrl: "assets/common/images/step-3.png",
@@ -40,26 +40,36 @@ const services = [
     desc: `Transformational Coaching – One-on-One Support.
 Vision Board Workshop (Manifestation & Goal-Setting for Personal Growth)`,
     img: "assets/common/images/service-1.png",
+    imp1: "https://l.bttr.to/ssIEf",
+    imp2: "https://l.bttr.to/5f9QJ",
   },
   {
     title: "Holistic Nutrition & Wellness",
     desc: `Holistic Eating Program provides balanced Nutrition & Mindful Eating Guidance`,
     img: "assets/common/images/service-2.png",
+    imp1: "https://l.bttr.to/9PUUA",
+    imp2: "https://l.bttr.to/9cwIi",
   },
   {
     title: "Yoga & Movement Therapy",
     desc: `• Individual Yoga Sessions (Personalized Yoga for Strength & Healing)\n• Group Yoga – Sadhana Chakra Yog (Holistic Yoga for Mind, Body & Spirit)`,
     img: "assets/common/images/service-3.png",
+    imp1: "https://l.bttr.to/uMSuW",
+    imp2: "https://l.bttr.to/gWL3w",
   },
   {
     title: "Meditation & Healing",
     desc: `• 21-Day Self-Healing Meditation (Daily Guided Meditation for Inner Balance)\n• Golden Ball Meditation (Energy Protection & Spiritual Alignment)`,
     img: "assets/common/images/service-4.png",
+    imp1: "https://l.bttr.to/Kg14f",
+    imp2: "https://l.bttr.to/2AHNn",
   },
   {
     title: "Free Community Healing Space",
     desc: `• Her Healing Haven\n• Yog Nidra Meditation\n• Sadhana Chakra Yoga\n(Support, Meditation & Yoga for Women in Need).`,
     img: "assets/common/images/service-5.png",
+    imp1: "https://l.bttr.to/ssIEf",
+    imp2: "https://l.bttr.to/5f9QJ",
   },
 ];
 
@@ -80,7 +90,7 @@ const Home = () => {
         referrerPolicy='strict-origin-when-cross-origin'
         allowFullScreen
       />
-      <div className='mt-8'>
+      <div className='pt-12 lg:h-[calc(100vh-80px)]'>
         <div className='font-cormorant text-3xl text-center font-bold text-text-accent my-5'>
           We are here to help you in 3 steps
         </div>
@@ -129,8 +139,11 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className='bg-accent py-6' id='services'>
-        <div className='font-cormorant text-3xl text-center font-bold text-text-accent pt-4 pb-7'>Our Services</div>
+      <div id='services' className='bg-accent w-screen h-1 relative lg:-top-4 ' />
+      <div className='bg-accent py-6'>
+        <div className='font-cormorant text-3xl text-center font-bold text-text-accent pt-4 pb-7'>
+          Pay-It-Forward Services
+        </div>
         <div className='flex gap-8 overflow-x-auto px-6 py-2 scrollbar-none scrollbar-thumb-gray-400 scroll-smooth'>
           {services.map((service, index) => {
             return (
@@ -142,6 +155,24 @@ const Home = () => {
                 <div className='font-cormorant text-2xl text-center font-bold text-text-accent'>{service.title}</div>
                 <div className='font-montserrat text-lg text-center font-normal text-text-accent whitespace-pre-line'>
                   {service.desc}
+                </div>
+                <div className='flex w-full justify-evenly items-center'>
+                  <div
+                    onClick={() => {
+                      window?.open(service.imp1, "_blank");
+                    }}
+                    className='text-text-accent font-bold text-xl text-center font-cormorant bg-accent px-3 py-1 rounded-2xl cursor-pointer'
+                  >
+                    Impact 1
+                  </div>
+                  <div
+                    onClick={() => {
+                      window?.open(service.imp1, "_blank");
+                    }}
+                    className='text-text-accent font-bold text-xl text-center font-cormorant bg-accent px-3 py-1 rounded-2xl cursor-pointer'
+                  >
+                    Impact 2
+                  </div>
                 </div>
               </div>
             );

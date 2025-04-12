@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Donate from "./Donate";
 
 const mobileImages = [
   "assets/mobile/images/home-1.png",
@@ -46,8 +47,8 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className='h-[calc(100vh-64px)] lg:h-auto w-screen flex flex-col'>
-      <div className='lg:h-[calc(100vh-64px)] flex flex-col'>
+    <div className='h-[calc(100vh)] lg:h-auto w-screen flex flex-col relative'>
+      <div className='lg:h-[calc(100vh)] flex flex-col'>
         <div className={`h-[65vh] lg:h-4/5 w-screen justify-center flex items-end relative`}>
           {bgImages.map((bgImg, index) => {
             return (
@@ -84,6 +85,7 @@ const Carousel = () => {
           />
         </div>
       </div>
+      <Donate />
     </div>
   );
 };

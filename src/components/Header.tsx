@@ -1,22 +1,41 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 
 const Header = () => {
   const [isMenuHidden, setIsMenuHidden] = useState(true);
   const navigate = useNavigate();
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className='sticky top-0 z-100'>
+    <div
+      style={{ display: scrolled ? "initial" : "none" }}
+      className={`sticky top-0 z-100 transition-all duration-500`}
+    >
       <div className='h-16 w-screen bg bg-accent flex justify-between items-center px-4 flex-row lg:flex-row-reverse'>
         <div className='hidden lg:flex lg:justify-end items-center gap-5 z-10'>
           <a
             target='_blank'
             href='https://l.bttr.to/K5QtQ'
-            className='text-text-accent text-center text-base font-medium cursor-pointer group w-20 hover:text-[#C86251]'
+            className='text-text-accent text-center text-base font-medium cursor-pointer group w-20'
           >
             Resources
             <svg
-              className='w-20 h-[4px]'
+              className='w-20 h-[4px] hidden group-hover:block'
               viewBox='0 0 181 4'
               fill='none'
               xmlns='http://www.w3.org/2000/svg'
@@ -32,11 +51,11 @@ const Header = () => {
           <a
             target='_blank'
             href='http://meetourstaffvolunteers.godaddysites.com'
-            className='text-text-accent text-center text-base font-medium cursor-pointer group w-20 hover:text-[#C86251]'
+            className='text-text-accent text-center text-base font-medium cursor-pointer group w-20'
           >
             Yoginis
             <svg
-              className='w-20 h-[4px]'
+              className='w-20 h-[4px] hidden group-hover:block'
               viewBox='0 0 181 4'
               fill='none'
               xmlns='http://www.w3.org/2000/svg'
@@ -54,11 +73,11 @@ const Header = () => {
               window.scrollTo({ top: 0, behavior: "smooth" });
               navigate("/about", { replace: true });
             }}
-            className='text-text-accent text-center text-base font-medium cursor-pointer group w-20 hover:text-[#C86251]'
+            className='text-text-accent text-center text-base font-medium cursor-pointer group w-20'
           >
             About us
             <svg
-              className='w-20 h-[4px]'
+              className='w-20 h-[4px] hidden group-hover:block'
               viewBox='0 0 181 4'
               fill='none'
               xmlns='http://www.w3.org/2000/svg'
@@ -71,13 +90,18 @@ const Header = () => {
             </svg>
           </div>
 
-          <div className='bg-text-accent text-white text-base px-4 py-2 font-medium rounded-3xl cursor-pointer hover:bg-[#3D7573]'>
+          <a
+            href='https://giv.li/l4dozl'
+            target='_blank'
+            className='bg-text-accent text-white text-base px-4 py-2 font-medium rounded-3xl cursor-pointer hover:bg-[#3D7573]'
+          >
             Donate
-          </div>
+          </a>
         </div>
         <div className='lg:absolute flex justify-center items-center lg:w-full lg:h-full z-1'>
           <img
             onClick={() => {
+              window.scrollTo({ top: 0, behavior: "smooth" });
               setIsMenuHidden(true);
               navigate("/", { replace: true });
             }}
@@ -89,6 +113,7 @@ const Header = () => {
         <div className='cursor-pointer z-1'>
           <img
             onClick={() => {
+              window.scrollTo({ top: 0, behavior: "smooth" });
               setIsMenuHidden(true);
               navigate("/", { replace: true });
             }}
@@ -114,8 +139,14 @@ const Header = () => {
         }`}
       >
         <div className='flex justify-end items-center mb-8 gap-2'>
-          <a className='font-cormorant font-bold text-3xl text-text-accent'>Sign up</a>
-          <img src='assets/common/svgs/login.svg' alt='' className='w-8 h-8' />
+          <a
+            href='https://giv.li/l4dozl'
+            target='_blank'
+            className='font-cormorant font-bold text-3xl text-text-accent'
+          >
+            Donate
+          </a>
+          {/* <img src='assets/common/svgs/login.svg' alt='' className='w-8 h-8' /> */}
         </div>
         <div className='flex flex-col gap-6'>
           <div>
@@ -124,7 +155,7 @@ const Header = () => {
                 setIsMenuHidden(true);
                 window?.open("https://l.bttr.to/K5QtQ", "_blank")?.focus();
               }}
-              className='font-cormorant font-bold text-xl text-text-accent'
+              className='font-cormorant font-bold text-xl text-text-accent cursor-pointer'
             >
               Resources
             </div>
@@ -136,7 +167,7 @@ const Header = () => {
                 setIsMenuHidden(true);
                 window?.open("http://meetourstaffvolunteers.godaddysites.com", "_blank")?.focus();
               }}
-              className='font-cormorant font-bold text-xl text-text-accent'
+              className='font-cormorant font-bold text-xl text-text-accent cursor-pointer'
             >
               Yoginis
             </div>

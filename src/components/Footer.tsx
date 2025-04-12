@@ -9,7 +9,7 @@ const socials = [
   },
   {
     icon: "assets/common/svgs/linkedIn.svg",
-    link: "https://www.linkedin.com/in/harriet-russell-175b9453/",
+    link: "https://www.linkedin.com/company/p3-holistic-wellness-inc/",
   },
   {
     icon: "assets/common/svgs/youtube.svg",
@@ -41,9 +41,13 @@ const Footer = () => {
             })}
           </div>
           <div className='group inline-flex justify-center items-center flex-col cursor-pointer'>
-            <div className='text-4xl font-cormorant text-text-accent text-center font-bold group-hover:text-[#C86251]'>
+            <a
+              href='https://giv.li/l4dozl'
+              target='_blank'
+              className='text-4xl font-cormorant text-text-accent text-center font-bold group-hover:text-[#C86251]'
+            >
               Donate now
-            </div>
+            </a>
             <svg width='181' height='4' viewBox='0 0 181 4' fill='none' xmlns='http://www.w3.org/2000/svg'>
               <path
                 className='fill-text-accent group-hover:fill-[#C86251]'
