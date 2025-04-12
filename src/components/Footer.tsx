@@ -44,7 +44,7 @@ const Footer = () => {
             <a
               href='https://giv.li/l4dozl'
               target='_blank'
-              className='text-4xl font-cormorant text-text-accent text-center font-bold group-hover:text-[#C86251]'
+              className='text-4xl font-cormorant text-text-accent text-center font-bold'
             >
               Donate now
             </a>
