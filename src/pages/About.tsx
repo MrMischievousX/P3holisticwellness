@@ -50,7 +50,7 @@ const About = () => {
     <div className=''>
       <div
         style={{ backgroundImage: `url(assets/mobile/images/about.jpeg)` }}
-        className={`h-[calc(100vh)] w-screen justify-center bg-no-repeat bg-cover bg-center flex items-center py-4 transition-opacity duration-700 opacity-100]`}
+        className={`h-[calc(100vh)] w-screen justify-center bg-no-repeat bg-cover bg-center flex items-center py-4 transition-opacity duration-700 opacity-100`}
       >
         <div className='p-4 my-12 mx-8 bg-white rounded-2xl font-montserrat text-xl font-normal text-[#398A86] text-center lg:max-w-3xl lg:p-4'>
           Founded in 2020 during the COVID-19 pandemic, our nonprofit organization is based in North Carolina, USA. We

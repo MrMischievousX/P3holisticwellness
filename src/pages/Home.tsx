@@ -1,38 +1,10 @@
+import { useNavigate } from "react-router";
 import Carousel from "../components/Carousel";
 import JoinUs from "../components/JoinUs";
 import Mission from "../components/Mission";
 import Testimonials from "../components/Testimonials";
 import Thrive from "../components/Thrive";
-
-const steps = [
-  {
-    imgUrl: "assets/common/images/step-1.png",
-    hoverImgUrl: "assets/common/images/step-1-hover.png",
-    title: "Step 1:",
-    subTitle: "Pay-It-Forward",
-    desc: "For every session you book, you help provide free wellness services to women in need. There are 2 options: If you pay regular price, one woman will be allowed service for free and if you pay a bit higher prize, two women will be given free services.",
-    link: "Choose Your Impact",
-    url: "#services",
-  },
-  {
-    imgUrl: "assets/common/images/step-2.png",
-    hoverImgUrl: "assets/common/images/step-2-hover.png",
-    title: "Step 2:",
-    subTitle: "Services",
-    desc: "We provide workshops, seminars, and online resources to educate and empower women with holistic health knowledge they can apply to their daily lives. We provide a space for you to meditate, a nutritious diet plan and programs that might be beneficial for you.",
-    link: "Services",
-    url: "https://l.bttr.to/luA0Y",
-  },
-  {
-    imgUrl: "assets/common/images/step-3.png",
-    hoverImgUrl: "assets/common/images/step-3-hover.png",
-    title: "Step 3:",
-    subTitle: "Engage",
-    desc: `Join our "Step Into Your Personal Power" Facebook community to connect with like-minded women on holistic health and growth. Gain expert tips, live sessions, and support in a space designed for mind, body, and spirit transformation.`,
-    link: "Connect with our community",
-    url: "https://www.facebook.com/share/g/194jdT6Dfc/",
-  },
-];
+import InternationalBooking from "../components/InternationalBooking";
 
 const services = [
   {
@@ -40,37 +12,33 @@ const services = [
     desc: `Transformational Coaching – One-on-One Support.
 Vision Board Workshop (Manifestation & Goal-Setting for Personal Growth)`,
     img: "assets/common/images/service-1.png",
-    imp1: "https://l.bttr.to/ssIEf",
-    option1: "Impact 1",
-    imp2: "https://l.bttr.to/5f9QJ",
-    option2: "Impact 2",
+    imp1: "https://l.bttr.to/eUhrQ",
+    option1: "Discover",
+    imp2: "https://l.bttr.to/yfjnd",
+    option2: "Book",
   },
   {
     title: "Holistic Nutrition & Wellness",
     desc: `Holistic Eating Program provides balanced Nutrition & Mindful Eating Guidance`,
     img: "assets/common/images/service-2.png",
-    imp1: "https://l.bttr.to/9PUUA",
-    option1: "Impact 1",
-    imp2: "https://l.bttr.to/9cwIi",
-    option2: "Impact 2",
+    imp1: "https://l.bttr.to/lJRCc",
+    option1: "Discover",
+    imp2: "https://l.bttr.to/AlaTA",
+    option2: "Book",
   },
   {
     title: "Yoga & Movement Therapy",
     desc: `• Individual Yoga Sessions (Personalized Yoga for Strength & Healing)\n• Group Yoga – Sadhana Chakra Yog (Holistic Yoga for Mind, Body & Spirit)`,
     img: "assets/common/images/service-3.png",
-    imp1: "https://l.bttr.to/uMSuW",
-    option1: "Impact 1",
-    imp2: "https://l.bttr.to/gWL3w",
-    option2: "Impact 2",
+    imp1: "https://l.bttr.to/kQWha",
+    option1: "Book",
   },
   {
     title: "Meditation & Healing",
     desc: `• 21-Day Self-Healing Meditation (Daily Guided Meditation for Inner Balance)\n• Golden Ball Meditation (Energy Protection & Spiritual Alignment)`,
     img: "assets/common/images/service-4.png",
-    imp1: "https://l.bttr.to/Kg14f",
-    option1: "Impact 1",
-    imp2: "https://l.bttr.to/2AHNn",
-    option2: "Impact 2",
+    imp1: "https://l.bttr.to/UU93l",
+    option1: "Book",
   },
   {
     title: "Free Community Healing Space",
@@ -82,18 +50,50 @@ Vision Board Workshop (Manifestation & Goal-Setting for Personal Growth)`,
 ];
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const steps = [
+    {
+      imgUrl: "assets/common/images/step-1.png",
+      hoverImgUrl: "assets/common/images/step-1-hover.png",
+      title: "Step 1:",
+      subTitle: "Pay-It-Forward",
+      desc: "There are two options: choose the standard rate to sponsor one woman’s free session, or select the elevated rate to support two women on their healing journey.",
+      link: "Choose Your Impact",
+      onclick: () => navigate("/pay-it-forward"),
+    },
+    {
+      imgUrl: "assets/common/images/step-2.png",
+      hoverImgUrl: "assets/common/images/step-2-hover.png",
+      title: "Step 2:",
+      subTitle: "Services",
+      desc: "We provide workshops, seminars, and online resources to educate and empower women with holistic health knowledge they can apply to their daily lives. We provide a space for you to meditate, a nutritious diet plan and programs that might be beneficial for you.",
+      link: "Services",
+      url: "https://l.bttr.to/luA0Y",
+    },
+    {
+      imgUrl: "assets/common/images/step-3.png",
+      hoverImgUrl: "assets/common/images/step-3-hover.png",
+      title: "Step 3:",
+      subTitle: "Engage",
+      desc: `Join our "Step Into Your Personal Power" Facebook community to connect with like-minded women on holistic health and growth. Gain expert tips, live sessions, and support in a space designed for mind, body, and spirit transformation.`,
+      link: "Connect with our community",
+      url: "https://www.facebook.com/share/g/194jdT6Dfc/",
+    },
+  ];
+
   return (
-    <div>
+    <div className=''>
       <Carousel />
-      <div className='flex justify-evenly items-center flex-col min-h-screen'>
+      <div className='flex justify-center items-center flex-col min-h-screen'>
         <Thrive />
         <Mission />
         <JoinUs />
       </div>
       <iframe
-        className='w-screen h-[700px] mt-20'
+        className='w-screen h-[calc(100vh-64px)] mt-20 '
         src='https://www.youtube.com/embed/2OYar8OHEOU?si=uHcyTq_IZ3qHbs51'
-        title='YouTube video player'
+        title='Beautiful Nature Scenery Relaxing Peaceful Soothing Music | Bird Sounds, Water Sound, Sleep Music'
         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
         referrerPolicy='strict-origin-when-cross-origin'
         allowFullScreen
@@ -123,7 +123,14 @@ const Home = () => {
                   <div className='font-cormorant text-2xl text-center font-bold text-white'>{step.title}</div>
                   <div className='font-cormorant text-2xl text-center font-bold text-white mt-1'>{step.subTitle}</div>
                   <div className='font-montserrat text-lg text-center font-normal text-white mt-2'>{step.desc}</div>
-                  {step.url ? (
+                  {step.onclick ? (
+                    <div
+                      onClick={step.onclick}
+                      className='font-montserrat text-lg text-center font-normal text-white mt-2 underline cursor-pointer underline-offset-2'
+                    >
+                      {step.link}
+                    </div>
+                  ) : (
                     <a
                       href={step.url}
                       target={step.url.includes("#") ? "_self" : "_blank"}
@@ -132,10 +139,6 @@ const Home = () => {
                     >
                       {step.link}
                     </a>
-                  ) : (
-                    <span className='font-montserrat text-lg text-center font-normal text-white mt-2 underline cursor-pointer underline-offset-2'>
-                      {step.link}
-                    </span>
                   )}
                 </div>
                 <div className='hidden lg:flex flex-col items-start ml-5 mb-5 group-hover:hidden'>
@@ -157,40 +160,43 @@ const Home = () => {
             return (
               <div
                 key={index}
-                className='border-1 border-text-accent bg-white flex-shrink-0 w-80 h-[590px] rounded-t-full flex justify-evenly items-center flex-col p-4 lg:border-2'
+                className='border-1 border-text-accent bg-white flex-shrink-0 w-80 h-[590px] rounded-t-full flex justify-between items-center flex-col p-4 lg:border-2 gap-3'
               >
-                <img src={service.img} alt='' className='hover:scale-105' />
-                <div className='font-cormorant text-2xl text-center font-bold text-text-accent'>{service.title}</div>
-                <div className='font-montserrat text-lg text-center font-normal text-text-accent whitespace-pre-line'>
-                  {service.desc}
-                </div>
-                <div className='flex w-full justify-evenly items-center'>
-                  {service.imp1 && (
-                    <div
-                      onClick={() => {
-                        window?.open(service.imp1, "_blank");
-                      }}
-                      className='text-text-accent font-bold text-xl text-center font-cormorant bg-accent px-3 py-1 rounded-2xl cursor-pointer'
-                    >
-                      {service.option1}
-                    </div>
-                  )}
-                  {service.imp2 && (
-                    <div
-                      onClick={() => {
-                        window?.open(service.imp2, "_blank");
-                      }}
-                      className='text-text-accent font-bold text-xl text-center font-cormorant bg-accent px-3 py-1 rounded-2xl cursor-pointer'
-                    >
-                      {service.option2}
-                    </div>
-                  )}
+                <img src={service.img} alt='' className='hover:scale-105 w-full h-80' />
+                <div className='flex flex-col justify-between items-center w-full h-full'>
+                  <div className='font-cormorant text-2xl text-center font-bold text-text-accent'>{service.title}</div>
+                  <div className='font-montserrat text-base text-center font-normal text-text-accent whitespace-pre-line'>
+                    {service.desc}
+                  </div>
+                  <div className='flex w-full justify-evenly items-center'>
+                    {service.imp1 && (
+                      <div
+                        onClick={() => {
+                          window?.open(service.imp1, "_blank");
+                        }}
+                        className='text-text-accent font-bold text-xl text-center font-cormorant bg-accent px-3 py-1 rounded-2xl cursor-pointer'
+                      >
+                        {service.option1}
+                      </div>
+                    )}
+                    {service.imp2 && (
+                      <div
+                        onClick={() => {
+                          window?.open(service.imp2, "_blank");
+                        }}
+                        className='text-text-accent font-bold text-xl text-center font-cormorant bg-accent px-3 py-1 rounded-2xl cursor-pointer'
+                      >
+                        {service.option2}
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             );
           })}
         </div>
       </div>
+      <InternationalBooking />
       <div className='font-cormorant text-3xl font-semibold text-text-accent text-center bg-white my-10'></div>
       <div className='flex justify-center items-center flex-1 lg:py-15'>
         <div className='font-satisfy text-3xl font-normal text-text-accent text-center flex flex-1 justify-center items-center px-4 lg:flex-initial lg:p-16 lg:font-cormorant lg:text-5xl lg:font-semibold relative'>

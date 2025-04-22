@@ -56,21 +56,24 @@ const Footer = () => {
             </svg>
           </div>
         </div>
-        <div className='flex flex-col justify-center items-center gap-3 z-1 lg:pr-24'>
-          <div className='group flex flex-col justify-center items-center gap-1'>
-            <div className='text-xl font-cormorant text-text-accent text-center font-bold'>Address</div>
-            <div className='text-base font-montserrat text-text-accent text-center font-normal underline underline-offset-4'>
+        <div className='flex flex-col justify-center items-center lg:items-start gap-3 z-1 lg:pr-24'>
+          <div className='group flex flex-col justify-center items-center lg:items-start gap-1'>
+            <div className='text-xl font-cormorant text-text-accent font-bold'>Address</div>
+            <div className='text-base font-montserrat text-text-primary font-normal underline underline-offset-4'>
               Charlotte, NC 28262, US
             </div>
           </div>
-          <div className='group flex flex-col justify-center items-center gap-1'>
-            <div className='text-xl font-cormorant text-text-accent text-center font-bold'>Contact us</div>
+          <div className='flex flex-col justify-center items-center lg:items-start gap-1'>
+            <div className='text-xl font-cormorant text-text-accent text font-bold'>Contact us</div>
             <a
               href='mailto:harriet@p3holistichealth.com'
-              className='text-base font-montserrat text-text-accent group-hover:text-[#C86251] text-center font-normal underline underline-offset-4 cursor-pointer'
+              className='text-base font-montserrat text-text-primary hover:text-[#C86251] font-normal underline underline-offset-4 cursor-pointer'
             >
-              harriet@p3holistichealth.com
+              admin@p3holisticwellness.org
             </a>
+            <div className='text-base font-montserrat text-text-primary font-normal underline underline-offset-4'>
+              (413) 225-2623
+            </div>
           </div>
         </div>
       </div>

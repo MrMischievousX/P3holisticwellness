@@ -69,7 +69,7 @@ const Header = () => {
           <div
             onClick={() => {
               window.scrollTo({ top: 0, behavior: "smooth" });
-              navigate("/about", { replace: true });
+              navigate("/about");
             }}
             className='text-text-accent text-center text-base font-medium cursor-pointer group w-20'
           >
@@ -101,7 +101,7 @@ const Header = () => {
             onClick={() => {
               window.scrollTo({ top: 0, behavior: "smooth" });
               setIsMenuHidden(true);
-              navigate("/", { replace: true });
+              navigate("/");
             }}
             src='assets/common/svgs/logo.svg'
             alt='logo'
@@ -113,7 +113,7 @@ const Header = () => {
             onClick={() => {
               window.scrollTo({ top: 0, behavior: "smooth" });
               setIsMenuHidden(true);
-              navigate("/", { replace: true });
+              navigate("/");
             }}
             src='assets/common/svgs/logo-name.svg'
             alt='name'
@@ -176,7 +176,7 @@ const Header = () => {
               onClick={() => {
                 setIsMenuHidden(true);
                 window.scrollTo({ top: 0, behavior: "smooth" });
-                navigate("/about", { replace: true });
+                navigate("/about");
               }}
               className='font-cormorant font-bold text-xl text-text-accent'
             >

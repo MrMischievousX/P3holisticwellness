@@ -25,3 +25,7 @@ button {
 @utility shadow-custom {
   box-shadow: 0px 4px 20px 0px #00000040;
 }
+
+@utility blue-gradient {
+  'background':'linear-gradient(180deg,#B8D8D60%,rgba(227,255,253,0.9)100%)', ;
+}
