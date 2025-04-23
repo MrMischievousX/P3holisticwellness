@@ -13,7 +13,7 @@ import Headroom from "react-headroom";
 createRoot(document.getElementById("root")!).render(
   <HashRouter>
     <ScrollToTop />
-    <Headroom className='z-50'>
+    <Headroom pin className='z-50'>
       <Header />
     </Headroom>
     <Routes>

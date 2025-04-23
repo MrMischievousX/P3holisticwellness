@@ -69,7 +69,7 @@ const Home = () => {
       hoverImgUrl: "assets/common/images/step-2-hover.png",
       title: "Step 2:",
       subTitle: "P3 Evolve Program",
-      desc: "P3 Evolve is a holistic wellness initiative for women who are ready to heal, grow, and rise—regardless of their financial circumstances.  This program provides free access to high-quality services in personal development, nutrition, yoga, meditation, and emotional healing.",
+      desc: "P3 Evolve is a free holistic wellness program empowering women to heal, grow, and thrive through personal development, nutrition, yoga, meditation, and emotional healing.",
       link: "P3 Evolve Program",
       onclick: () => {
         navigate("/p3-evolve");
