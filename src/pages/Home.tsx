@@ -68,9 +68,9 @@ const Home = () => {
       imgUrl: "assets/common/images/step-2.png",
       hoverImgUrl: "assets/common/images/step-2-hover.png",
       title: "Step 2:",
-      subTitle: "Services",
-      desc: "We provide workshops, seminars, and online resources to educate and empower women with holistic health knowledge they can apply to their daily lives. We provide a space for you to meditate, a nutritious diet plan and programs that might be beneficial for you.",
-      link: "Services",
+      subTitle: "P3 Evolve Program",
+      desc: "P3 Evolve is a holistic wellness initiative for women who are ready to heal, grow, and rise—regardless of their financial circumstances.  This program provides free access to high-quality services in personal development, nutrition, yoga, meditation, and emotional healing.",
+      link: "P3 Evolve Program",
       onclick: () => {
         navigate("/p3-evolve");
       },
@@ -126,11 +126,11 @@ const Home = () => {
                 <div className='flex flex-col lg:hidden group-hover:flex group-hover:flex-col transition-opacity items-center'>
                   <div className='font-cormorant text-2xl text-center font-bold text-white'>{step.title}</div>
                   <div className='font-cormorant text-2xl text-center font-bold text-white mt-1'>{step.subTitle}</div>
-                  <div className='font-montserrat text-lg text-center font-normal text-white mt-2'>{step.desc}</div>
+                  <div className='font-montserrat text-lg text-center font-normal text-white mt-1'>{step.desc}</div>
                   {step.onclick ? (
                     <div
                       onClick={step.onclick}
-                      className='font-montserrat text-lg text-center font-normal text-white mt-2 underline cursor-pointer underline-offset-2'
+                      className='font-montserrat text-lg text-center font-normal text-white mt-1 underline cursor-pointer underline-offset-2'
                     >
                       {step.link}
                     </div>
@@ -139,7 +139,7 @@ const Home = () => {
                       href={step.url}
                       target={step.url.includes("#") ? "_self" : "_blank"}
                       rel='noopener noreferrer'
-                      className='font-montserrat text-lg text-center font-normal text-white mt-2 underline cursor-pointer underline-offset-2'
+                      className='font-montserrat text-lg text-center font-normal text-white mt-1 underline cursor-pointer underline-offset-2'
                     >
                       {step.link}
                     </a>
