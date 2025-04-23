@@ -74,48 +74,48 @@ function Donate() {
       />
       <defs>
         <linearGradient id='a' x1='122.5' y1='0' x2='122.5' y2='107.243' gradientUnits='userSpaceOnUse'>
-          <stop stop-color={isHovered ? "#28514F" : "#5AB7B2"} stop-opacity={isHovered ? "0.9" : ".5"} />
-          <stop offset='1' stop-color={isHovered ? "#5AB7B2" : "#28514F"} stop-opacity={isHovered ? "0.5" : ".9"} />
+          <stop stopColor={isHovered ? "#28514F" : "#5AB7B2"} stopOpacity={isHovered ? "0.9" : ".5"} />
+          <stop offset='1' stopColor={isHovered ? "#5AB7B2" : "#28514F"} stopOpacity={isHovered ? "0.5" : ".9"} />
         </linearGradient>
         <linearGradient id='b' x1='10.574' y1='47.243' x2='10.574' y2='83.332' gradientUnits='userSpaceOnUse'>
-          <stop stop-color='#C86251' stop-opacity='.6' />
-          <stop offset='1' stop-color='#944639' stop-opacity='.8' />
+          <stop stopColor='#C86251' stopOpacity='.6' />
+          <stop offset='1' stopColor='#944639' stopOpacity='.8' />
         </linearGradient>
         <linearGradient id='c' x1='11.957' y1='47.761' x2='11.957' y2='83.331' gradientUnits='userSpaceOnUse'>
-          <stop stop-color='#C86251' stop-opacity='.6' />
-          <stop offset='1' stop-color='#944639' stop-opacity='.8' />
+          <stop stopColor='#C86251' stopOpacity='.6' />
+          <stop offset='1' stopColor='#944639' stopOpacity='.8' />
         </linearGradient>
         <linearGradient id='d' x1='57.042' y1='50.5' x2='57.042' y2='167.242' gradientUnits='userSpaceOnUse'>
-          <stop stop-color='#C86251' stop-opacity='.6' />
-          <stop offset='1' stop-color='#944639' stop-opacity='.8' />
+          <stop stopColor='#C86251' stopOpacity='.6' />
+          <stop offset='1' stopColor='#944639' stopOpacity='.8' />
         </linearGradient>
         <linearGradient id='e' x1='50.791' y1='75.31' x2='50.791' y2='126.13' gradientUnits='userSpaceOnUse'>
-          <stop stop-color='#C86251' stop-opacity='.6' />
-          <stop offset='1' stop-color='#944639' stop-opacity='.8' />
+          <stop stopColor='#C86251' stopOpacity='.6' />
+          <stop offset='1' stopColor='#944639' stopOpacity='.8' />
         </linearGradient>
         <linearGradient id='f' x1='78.259' y1='144.863' x2='78.259' y2='150.846' gradientUnits='userSpaceOnUse'>
-          <stop stop-color='#C86251' stop-opacity='.6' />
-          <stop offset='1' stop-color='#944639' stop-opacity='.8' />
+          <stop stopColor='#C86251' stopOpacity='.6' />
+          <stop offset='1' stopColor='#944639' stopOpacity='.8' />
         </linearGradient>
         <linearGradient id='g' x1='234.426' y1='47.243' x2='234.426' y2='83.332' gradientUnits='userSpaceOnUse'>
-          <stop stop-color='#C86251' stop-opacity='.6' />
-          <stop offset='1' stop-color='#944639' stop-opacity='.8' />
+          <stop stopColor='#C86251' stopOpacity='.6' />
+          <stop offset='1' stopColor='#944639' stopOpacity='.8' />
         </linearGradient>
         <linearGradient id='h' x1='233.044' y1='47.761' x2='233.044' y2='83.332' gradientUnits='userSpaceOnUse'>
-          <stop stop-color='#C86251' stop-opacity='.6' />
-          <stop offset='1' stop-color='#944639' stop-opacity='.8' />
+          <stop stopColor='#C86251' stopOpacity='.6' />
+          <stop offset='1' stopColor='#944639' stopOpacity='.8' />
         </linearGradient>
         <linearGradient id='i' x1='187.95' y1='50.5' x2='187.95' y2='167.244' gradientUnits='userSpaceOnUse'>
-          <stop stop-color='#C86251' stop-opacity='.6' />
-          <stop offset='1' stop-color='#944639' stop-opacity='.8' />
+          <stop stopColor='#C86251' stopOpacity='.6' />
+          <stop offset='1' stopColor='#944639' stopOpacity='.8' />
         </linearGradient>
         <linearGradient id='j' x1='194.21' y1='75.312' x2='194.21' y2='126.132' gradientUnits='userSpaceOnUse'>
-          <stop stop-color='#C86251' stop-opacity='.6' />
-          <stop offset='1' stop-color='#944639' stop-opacity='.8' />
+          <stop stopColor='#C86251' stopOpacity='.6' />
+          <stop offset='1' stopColor='#944639' stopOpacity='.8' />
         </linearGradient>
         <linearGradient id='k' x1='166.743' y1='144.863' x2='166.743' y2='150.846' gradientUnits='userSpaceOnUse'>
-          <stop stop-color='#C86251' stop-opacity='.6' />
-          <stop offset='1' stop-color='#944639' stop-opacity='.8' />
+          <stop stopColor='#C86251' stopOpacity='.6' />
+          <stop offset='1' stopColor='#944639' stopOpacity='.8' />
         </linearGradient>
       </defs>
     </svg>

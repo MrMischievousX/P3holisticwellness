@@ -60,7 +60,9 @@ const Home = () => {
       subTitle: "Pay-It-Forward",
       desc: "There are two options: choose the standard rate to sponsor one woman’s free session, or select the elevated rate to support two women on their healing journey.",
       link: "Choose Your Impact",
-      onclick: () => navigate("/pay-it-forward"),
+      onclick: () => {
+        navigate("/pay-it-forward");
+      },
     },
     {
       imgUrl: "assets/common/images/step-2.png",
@@ -69,7 +71,9 @@ const Home = () => {
       subTitle: "Services",
       desc: "We provide workshops, seminars, and online resources to educate and empower women with holistic health knowledge they can apply to their daily lives. We provide a space for you to meditate, a nutritious diet plan and programs that might be beneficial for you.",
       link: "Services",
-      url: "https://l.bttr.to/luA0Y",
+      onclick: () => {
+        navigate("/p3-evolve");
+      },
     },
     {
       imgUrl: "assets/common/images/step-3.png",
@@ -92,13 +96,13 @@ const Home = () => {
       </div>
       <iframe
         className='w-screen h-[calc(100vh-64px)] mt-20 '
-        src='https://www.youtube.com/embed/2OYar8OHEOU?si=uHcyTq_IZ3qHbs51'
+        src='https://www.youtube.com/embed/2OYar8OHEOU?si=uHcyTq_IZ3qHbs51&autoplay=1&mute=1'
         title='Beautiful Nature Scenery Relaxing Peaceful Soothing Music | Bird Sounds, Water Sound, Sleep Music'
         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
         referrerPolicy='strict-origin-when-cross-origin'
         allowFullScreen
       />
-      <div className='pt-12 lg:h-[calc(100vh-80px)]'>
+      <div className='pt-12 min-h-[calc(100vh-80px)] max-h-fit lg:h-[calc(100vh-80px)]'>
         <div className='font-cormorant text-3xl text-center font-bold text-text-accent my-5'>
           We are here to help you in 3 steps
         </div>
@@ -118,7 +122,7 @@ const Home = () => {
                 style={{ backgroundImage: `url(${step.hoverImgUrl})` }}
               />
 
-              <div className='relative z-10 flex w-full h-full flex-col items-center justify-center lg:items-start lg:justify-end p-2 border-[10px] border-white group-hover:items-center group-hover:justify-center'>
+              <div className='relative flex w-full h-full flex-col items-center justify-center lg:items-start lg:justify-end p-2 border-[10px] border-white group-hover:items-center group-hover:justify-center'>
                 <div className='flex flex-col lg:hidden group-hover:flex group-hover:flex-col transition-opacity items-center'>
                   <div className='font-cormorant text-2xl text-center font-bold text-white'>{step.title}</div>
                   <div className='font-cormorant text-2xl text-center font-bold text-white mt-1'>{step.subTitle}</div>

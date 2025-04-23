@@ -1,17 +1,17 @@
 const missions = [
-  "As a tax-exempt organization, we provide affordable holistic wellness to underserved communities, nurturing mind, body, and spirit.",
-  "We prioritize women facing barriers, ensuring unrestricted access to holistic health services.",
+  "Our mission is to bring holistic wellness to women who need it the most but cannot afford it. ",
+  "We prioritize women facing barriers, ensuring unrestricted access to holistic health services so every woman can rise, restore, and reclaim her life—no matter her financial circumstances.",
   "By working closely with community partners, donors, and volunteers, we ensure that holistic wellness is no longer a luxury—but a right for all.",
 ];
 
 const Mission = () => {
   return (
-    <div className='lg:bg-accent w-screen flex flex-col lg:flex-row justify-center items-center lg:px-15 lg:py-20 lg:gap-40'>
-      <div className='lg:mr-20'>
+    <div className='lg:bg-accent w-screen flex flex-col lg:flex-row justify-center items-end lg:px-15 lg:py-20 lg:gap-40'>
+      <div className='lg:mr-8'>
         <div className='hidden lg:block font-cormorant font-bold text-5xl/normal text-white w-14 mb-4'>
           Lets Thrive Together
         </div>
-        <div className='border-black flex items-center justify-center flex-col lg:flex-row lg:border lg:h-64 lg:gap-8 lg:rounded-3xl'>
+        <div className='border-black flex items-center justify-center flex-col lg:flex-row lg:border lg:h-[296px] lg:gap-8 lg:rounded-3xl lg:w-[656px]'>
           <img
             src='assets/mobile/images/harmony.png'
             alt=''
@@ -20,7 +20,7 @@ const Mission = () => {
           <img
             src='assets/desktop/images/harmony.png'
             alt=''
-            className='w-full h-auto lg:w-64 lg:h-64 hidden lg:block object-cover'
+            className='w-full h-auto lg:w-[296px] lg:h-[296px] hidden lg:block object-cover'
           />
           <div className='flex flex-col items-center lg:items-start'>
             <div className='font-cormorant font-semibold text-3xl text-text-accent text-center lg:text-left lg:text-white'>

@@ -71,9 +71,12 @@ const Footer = () => {
             >
               admin@p3holisticwellness.org
             </a>
-            <div className='text-base font-montserrat text-text-primary font-normal underline underline-offset-4'>
+            <a
+              href='tel:+14132252623'
+              className='text-base font-montserrat text-text-primary font-normal underline underline-offset-4 cursor-pointer hover:text-[#C86251]'
+            >
               (413) 225-2623
-            </div>
+            </a>
           </div>
         </div>
       </div>

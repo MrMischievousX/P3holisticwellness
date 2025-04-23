@@ -5,7 +5,7 @@ const PayItForward = () => {
     <div className=''>
       <div
         style={{ backgroundImage: `url(assets/common/images/pay-it-forward.jpeg)` }}
-        className={`scrollbar-none h-[150vh] overflow-y-auto w-screen bg-no-repeat bg-cover bg-center flex items-center flex-col px-4 py-10 gap-16`}
+        className={`scrollbar-none min-h-screen overflow-y-auto w-screen bg-no-repeat bg-cover bg-center flex items-center flex-col px-4 py-10 gap-16`}
       >
         <div className='font-cormorant font-bold text-5xl text-white text-center'>Pay-It-Forward Program</div>
 

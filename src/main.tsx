@@ -7,10 +7,15 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import PayItForward from "./pages/PayItForward";
 import P3Evolve from "./pages/P3Evolve";
+import ScrollToTop from "./components/ScrollTop";
+import Headroom from "react-headroom";
 
 createRoot(document.getElementById("root")!).render(
   <HashRouter>
-    <Header />
+    <ScrollToTop />
+    <Headroom className='z-50'>
+      <Header />
+    </Headroom>
     <Routes>
       <Route path='*' element={<Home />} />
       <Route path='/about' element={<About />} />

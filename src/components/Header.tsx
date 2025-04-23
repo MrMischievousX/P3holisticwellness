@@ -1,29 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router";
 
 const Header = () => {
   const [isMenuHidden, setIsMenuHidden] = useState(true);
   const navigate = useNavigate();
 
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setScrolled(true);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <div
-      style={{ display: scrolled ? "initial" : "none" }}
-      className={`sticky top-0 z-100 transition-all duration-500`}
-    >
+    <div className={`transition-all duration-500`}>
       <div className='h-16 w-screen bg bg-accent flex justify-between items-center px-4 flex-row lg:flex-row-reverse'>
         <div className='hidden lg:flex lg:justify-end items-center gap-5 z-10'>
           <a
@@ -68,7 +51,6 @@ const Header = () => {
 
           <div
             onClick={() => {
-              window.scrollTo({ top: 0, behavior: "smooth" });
               navigate("/about");
             }}
             className='text-text-accent text-center text-base font-medium cursor-pointer group w-20'
@@ -99,7 +81,6 @@ const Header = () => {
         <div className='lg:absolute flex justify-center items-center lg:w-full lg:h-full z-1'>
           <img
             onClick={() => {
-              window.scrollTo({ top: 0, behavior: "smooth" });
               setIsMenuHidden(true);
               navigate("/");
             }}
@@ -111,7 +92,6 @@ const Header = () => {
         <div className='cursor-pointer z-1'>
           <img
             onClick={() => {
-              window.scrollTo({ top: 0, behavior: "smooth" });
               setIsMenuHidden(true);
               navigate("/");
             }}
@@ -133,7 +113,7 @@ const Header = () => {
       </div>
       <div
         className={`bg-white absolute right-0 top-16 min-w-80 rounded-l-xl p-8 transition-all duration-700 transform ${
-          isMenuHidden ? "opacity-0 pointer-events-none" : "opacity-100"
+          isMenuHidden ? "opacity-0 pointer-events-none scale-95" : "opacity-100 pointer-events-auto scale-100"
         }`}
       >
         <div className='flex justify-end items-center mb-8 gap-2'>
@@ -175,7 +155,6 @@ const Header = () => {
             <div
               onClick={() => {
                 setIsMenuHidden(true);
-                window.scrollTo({ top: 0, behavior: "smooth" });
                 navigate("/about");
               }}
               className='font-cormorant font-bold text-xl text-text-accent'

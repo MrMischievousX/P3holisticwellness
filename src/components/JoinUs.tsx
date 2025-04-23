@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 const JoinUs = () => {
+  const [email, setEmail] = useState("");
+
   return (
     <div className='bg-[#38726F] w-screen py-8 flex justify-center items-center flex-col lg:flex-row lg:gap-12 lg:py-16'>
       <div className='flex justify-center items-center flex-col lg:items-end lg:gap-3'>
@@ -16,14 +20,28 @@ const JoinUs = () => {
           type='email'
           name=''
           id=''
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
         />
-        <a
-          href='https://p3holisticwellness.practicebetter.io/#/5ff5fa662a9c24108448237b/forms?f=67d78a66394e3987396b0e2e'
-          target='_blank'
+        <div
+          onClick={() => {
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+              return;
+            }
+
+            setEmail("");
+
+            window
+              ?.open(
+                "https://p3holisticwellness.practicebetter.io/#/5ff5fa662a9c24108448237b/forms?f=67d78a66394e3987396b0e2e",
+                "_blank"
+              )
+              ?.focus();
+          }}
           className='text-white font-cormorant text-base font-bold border px-3 py-1 rounded-sm cursor-pointer hover:text-shadow'
         >
           Sign up
-        </a>
+        </div>
       </div>
     </div>
   );
