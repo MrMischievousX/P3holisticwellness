@@ -102,7 +102,7 @@ const Home = () => {
         referrerPolicy='strict-origin-when-cross-origin'
         allowFullScreen
       />
-      <div className='pt-12 min-h-[calc(100vh-80px)] max-h-fit lg:h-[calc(100vh-80px)]'>
+      <div className='pt-12 min-h-[calc(100vh-64px)] max-h-fit lg:min-h-[calc(100vh-64px)]'>
         <div className='font-cormorant text-3xl text-center font-bold text-text-accent my-5'>
           We are here to help you in 3 steps
         </div>
@@ -154,8 +154,7 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div id='services' className='bg-accent w-screen h-1 relative lg:-top-4 lg:bg-transparent' />
-      <div className='bg-accent py-6'>
+      <div className='bg-accent py-6 min-h-[calc(100vh-64px)] max-h-fit lg:min-h-[calc(100vh-64px)] flex flex-col justify-evenly'>
         <div className='font-cormorant text-3xl text-center font-bold text-text-accent pt-4 pb-7'>
           Pay-It-Forward Services
         </div>
