@@ -79,7 +79,7 @@ const About = () => {
               style={{
                 backgroundColor: isAlternate ? "transparent" : "#B8D7D6",
               }}
-              className={`py-12 h-[calc(100vh)] cursor-pointer flex flex-col justify-evenly items-center px-2 gap-5 lg:h-auto lg:${
+              className={`py-12 min-h-[calc(100vh)] max-h-fit cursor-pointer flex flex-col justify-evenly items-center px-2 gap-5 lg:h-auto lg:${
                 !isAlternate ? "flex-row-reverse" : "flex-row"
               } lg:px-8`}
             >
