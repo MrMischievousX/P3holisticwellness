@@ -87,7 +87,7 @@ const Home = () => {
   ];
 
   return (
-    <div className=''>
+    <div className='w-screen overflow-x-hidden'>
       <Carousel />
       <div className='flex justify-center items-center flex-col min-h-screen'>
         <Thrive />
