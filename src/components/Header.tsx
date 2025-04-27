@@ -111,65 +111,67 @@ const Header = () => {
           />
         </div>
       </div>
-      <div className='bg-transparent w-screen h-screen absolute top-0 left-0' onClick={() => setIsMenuHidden(true)}>
-        <div
-          onClick={(e) => {
-            e.stopPropagation();
-          }}
-          className={`bg-white absolute right-0 top-16 min-w-80 rounded-l-xl p-8 transition-all duration-700 transform ${
-            isMenuHidden ? "opacity-0 pointer-events-none scale-95" : "opacity-100 pointer-events-auto scale-100"
-          }`}
-        >
-          <div className='flex justify-end items-center mb-8 gap-2'>
-            <a
-              href='https://giv.li/l4dozl'
-              target='_blank'
-              className='font-cormorant font-bold text-3xl text-text-accent'
-            >
-              Donate
-            </a>
-            {/* <img src='assets/common/svgs/login.svg' alt='' className='w-8 h-8' /> */}
-          </div>
-          <div className='flex flex-col gap-6'>
-            <div>
-              <div
-                onClick={() => {
-                  setIsMenuHidden(true);
-                  window?.open("https://l.bttr.to/K5QtQ", "_blank")?.focus();
-                }}
-                className='font-cormorant font-bold text-xl text-text-accent cursor-pointer'
+      {!isMenuHidden && (
+        <div className='bg-transparent w-screen h-screen absolute top-0 left-0' onClick={() => setIsMenuHidden(true)}>
+          <div
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+            className={`bg-white absolute right-0 top-16 min-w-80 rounded-l-xl p-8 transition-all duration-700 transform ${
+              isMenuHidden ? "opacity-0 pointer-events-none scale-95" : "opacity-100 pointer-events-auto scale-100"
+            }`}
+          >
+            <div className='flex justify-end items-center mb-8 gap-2'>
+              <a
+                href='https://giv.li/l4dozl'
+                target='_blank'
+                className='font-cormorant font-bold text-3xl text-text-accent'
               >
-                Resources
-              </div>
-              <img src='assets/common/svgs/login-underline.svg' alt='' />
+                Donate
+              </a>
+              {/* <img src='assets/common/svgs/login.svg' alt='' className='w-8 h-8' /> */}
             </div>
-            <div>
-              <div
-                onClick={() => {
-                  setIsMenuHidden(true);
-                  window?.open("http://meetourstaffvolunteers.godaddysites.com", "_blank")?.focus();
-                }}
-                className='font-cormorant font-bold text-xl text-text-accent cursor-pointer'
-              >
-                Yoginis
+            <div className='flex flex-col gap-6'>
+              <div>
+                <div
+                  onClick={() => {
+                    setIsMenuHidden(true);
+                    window?.open("https://l.bttr.to/K5QtQ", "_blank")?.focus();
+                  }}
+                  className='font-cormorant font-bold text-xl text-text-accent cursor-pointer'
+                >
+                  Resources
+                </div>
+                <img src='assets/common/svgs/login-underline.svg' alt='' />
               </div>
-              <img src='assets/common/svgs/login-underline.svg' alt='' />
-            </div>
-            <div>
-              <div
-                onClick={() => {
-                  setIsMenuHidden(true);
-                  navigate("/about");
-                }}
-                className='font-cormorant font-bold text-xl text-text-accent'
-              >
-                About us
+              <div>
+                <div
+                  onClick={() => {
+                    setIsMenuHidden(true);
+                    window?.open("http://meetourstaffvolunteers.godaddysites.com", "_blank")?.focus();
+                  }}
+                  className='font-cormorant font-bold text-xl text-text-accent cursor-pointer'
+                >
+                  Yoginis
+                </div>
+                <img src='assets/common/svgs/login-underline.svg' alt='' />
               </div>
-              <img src='assets/common/svgs/login-underline.svg' alt='' />
+              <div>
+                <div
+                  onClick={() => {
+                    setIsMenuHidden(true);
+                    navigate("/about");
+                  }}
+                  className='font-cormorant font-bold text-xl text-text-accent'
+                >
+                  About us
+                </div>
+                <img src='assets/common/svgs/login-underline.svg' alt='' />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
