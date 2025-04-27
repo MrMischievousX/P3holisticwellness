@@ -72,7 +72,7 @@ const Carousel = () => {
       </div>
       <div className='flex justify-center items-center flex-1 bg-accent lg:bg-transparent lg:py-15'>
         <div className='relative'>
-          <div className='font-satisfy text-3xl font-normal text-text-accent text-center flex flex-1 justify-center items-center px-4 lg:flex-initial lg:p-15 lg:font-cormorant lg:text-5xl lg:font-semibold relative'>
+          <div className='text-3xl font-normal text-text-accent text-center flex flex-1 justify-center items-center px-4 lg:flex-initial lg:p-15 font-cormorant lg:text-5xl lg:font-semibold relative'>
             <span className="relative before:content-['“'] after:content-['”'] before:text-[#197772CC] after:text-[#197772CC]">
               Holistic wellness is a fundamental right, not a luxury.
             </span>

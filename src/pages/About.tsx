@@ -50,7 +50,7 @@ const About = () => {
     <div className=''>
       <div
         style={{ backgroundImage: `url(assets/mobile/images/about.jpeg)` }}
-        className={`h-[calc(100vh)] w-screen justify-center bg-no-repeat bg-cover bg-center flex items-center py-4 transition-opacity duration-700 opacity-100`}
+        className={`min-h-[calc(100vh)] max-h-fit w-screen justify-center bg-no-repeat bg-cover bg-center flex items-center py-4 transition-opacity duration-700 opacity-100`}
       >
         <div className='p-4 my-12 mx-8 bg-white rounded-2xl font-montserrat text-xl font-normal text-[#398A86] text-center lg:max-w-3xl lg:p-4'>
           Founded in 2020 during the COVID-19 pandemic, our nonprofit organization is based in North Carolina, USA. We
@@ -79,7 +79,7 @@ const About = () => {
               style={{
                 backgroundColor: isAlternate ? "transparent" : "#B8D7D6",
               }}
-              className={`py-12 min-h-[calc(100vh)] max-h-fit cursor-pointer flex flex-col justify-evenly items-center px-2 gap-5 lg:h-auto lg:${
+              className={`py-12 min-h-[calc(100vh)] max-h-fit cursor-pointer flex flex-col justify-evenly items-center px-2 gap-5 lg:min-h-auto lg:h-auto lg:${
                 !isAlternate ? "flex-row-reverse" : "flex-row"
               } lg:px-8`}
             >
