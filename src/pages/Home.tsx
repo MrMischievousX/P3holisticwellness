@@ -110,7 +110,7 @@ const Home = () => {
           {steps.map((step, index) => (
             <div
               key={index}
-              className='relative w-[100vw] h-[100vw] lg:h-[33.33vw] lg:w-[33.33vw] p-5 group overflow-hidden'
+              className='relative w-[100vw] h-[100vw] min-h-fit lg:h-[33.33vw] lg:w-[33.33vw] p-5 group overflow-hidden'
             >
               <div
                 className='absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-700 opacity-100'

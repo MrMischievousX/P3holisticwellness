@@ -65,10 +65,11 @@ const Carousel = () => {
             You are not alone in your journey
           </div>
         </div>
-        <div className='flex flex-row justify-center items-center py-5 gap-5 lg:h-1/5 lg:bg-accent lg:gap-10'>
+        <div className='hidden lg:flex flex-row justify-center items-center py-5 gap-5 lg:h-1/5 lg:bg-accent lg:gap-10'>
           <img src='assets/common/svgs/logo.svg' alt='logo' className='w-auto h-10 lg:h-24' />
           <img src='assets/common/svgs/logo-name.svg' alt='name' className='w-auto h-11 lg:h-24' />
         </div>
+        <img src='assets/common/svgs/full-logo.svg' alt='name' className='w-auto my-5 mx-2 h-11 lg:hidden' />
       </div>
       <div className='flex justify-center items-center flex-1 bg-accent lg:bg-transparent lg:py-15'>
         <div className='relative'>
